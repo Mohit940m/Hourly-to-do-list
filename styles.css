@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Background color set to white */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.clear-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+    background-color: #d32f2f;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+#todo-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.todo-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the delete button */
+}
+
+.todo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.todo-box.green {
+    background-color: rgba(144, 238, 144, 0.2); /* Light green with 20% opacity */
+}
+
+.todo-box.yellow {
+    background-color: rgba(255, 255, 0, 0.2); /* Yellow with 20% opacity */
+}
+
+.todo-box.red {
+    background-color: rgba(255, 0, 0, 0.3); /* Red with 30% opacity */
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-header h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.success {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button.pending {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+button.not-done {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.note-section {
+    margin-top: 15px;
+}
+
+.note-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    resize: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Delete Button Styling */
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
